@@ -16,7 +16,6 @@ public class User {
     private String role;
     private String password;
     private long subjectId;
-    private long markId;
 
     public User() {
     }
@@ -27,7 +26,6 @@ public class User {
         this.role = role;
         this.password = password;
         this.subjectId = subjectId;
-        this.markId = markId;
     }
 
     public long getUserId() {
@@ -50,9 +48,6 @@ public class User {
         return subjectId;
     }
 
-    public long getMarkId() {
-        return markId;
-    }
 
     @Override
     public String toString() {
@@ -62,7 +57,6 @@ public class User {
                 ", role='" + role + '\'' +
                 ", password='" + password + '\'' +
                 ", subjectId=" + subjectId +
-                ", markId=" + markId +
                 '}';
     }
 }
