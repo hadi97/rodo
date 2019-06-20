@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/subjects")
+@RequestMapping("api/subjects")
 public class SubjectApi {
     private SubjectManager subjectManager;
 
@@ -18,13 +18,13 @@ public class SubjectApi {
     }
 
     @CrossOrigin
-    @GetMapping("/all")
+    @RequestMapping(method = RequestMethod.GET,value = "/getAll")
     public Iterable<Subject> getAll() {
         return subjectManager.findAll();
     }
 
     @CrossOrigin
-    @GetMapping
+    @RequestMapping(method = RequestMethod.GET,value = "/get")
     public Optional<Subject> getById(@RequestParam Long index) {
         return subjectManager.findById(index);
     }

@@ -6,8 +6,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
+
+@CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("api/users")
 public class UserApi {
     private UserManager userManager;
 
@@ -16,20 +18,17 @@ public class UserApi {
         this.userManager = userManager;
     }
 
-    @CrossOrigin
-    @GetMapping("/all")
+    @RequestMapping(method = RequestMethod.GET,value = "/getAll")
     public Iterable<User> getAll() {
         return userManager.findAll();
     }
 
-    @CrossOrigin
-    @GetMapping
+    @RequestMapping(method = RequestMethod.GET,value = "/get")
     public Optional<User> getById(@RequestParam Long id) {
         return userManager.findById(id);
     }
 
-    @CrossOrigin
-    @PostMapping
+    @RequestMapping(method = RequestMethod.POST)
     public User addUser(@RequestBody User user) {
         return userManager.save(user);
     }
