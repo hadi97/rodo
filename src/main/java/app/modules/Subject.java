@@ -1,8 +1,8 @@
 package app.modules;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
@@ -10,13 +10,15 @@ public class Subject {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    //@GeneratedValue(strategy = GenerationType.AUTO)
     private long subjectId;
+    private long markId;
     private String name;
 
-    public Subject(String name, long subjectId) {
-        this.name = name;
+    public Subject(long subjectId,String name, long markId) {
         this.subjectId = subjectId;
+        this.name = name;
+        this.markId = markId;
     }
 
     public Subject() {
@@ -28,5 +30,9 @@ public class Subject {
 
     public long getSubjectId() {
         return subjectId;
+    }
+
+    public long getMarkId() {
+        return markId;
     }
 }

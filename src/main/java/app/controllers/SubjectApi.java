@@ -25,12 +25,12 @@ public class SubjectApi {
 
     @CrossOrigin
     @RequestMapping(method = RequestMethod.GET,value = "/get")
-    public Optional<Subject> getById(@RequestParam Long index) {
-        return subjectManager.findById(index);
+    public Optional<Subject> getByUserId(@RequestParam Long id ){
+        return subjectManager.findByUserId(id);
     }
 
     @CrossOrigin
-    @PostMapping
+    @RequestMapping(method = RequestMethod.POST)
     public Subject addSubject(@RequestBody Subject subject) {
         return subjectManager.save(subject);
     }
