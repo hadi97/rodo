@@ -4,6 +4,7 @@ import app.modules.Mark;
 import app.service.MarkManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import sun.misc.Request;
 
@@ -33,7 +34,7 @@ public class MarkApi {
     }
 
     @CrossOrigin
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.POST )
     public Mark addMark(@RequestBody Mark mark) {
         return markManager.save(mark);
     }
