@@ -17,15 +17,19 @@ public class UserManager {
         this.userRepository = userRepository;
     }
 
-
+    //get
     public Optional<User> findById(Long id) {
         return userRepository.findById(id);
     }
 
+
+    //get all users
     public Iterable<User> findAll() {
         return userRepository.findAll();
     }
 
+
+    //adding user
     public User save(User user) {
         return userRepository.save(user);
     }
@@ -33,7 +37,7 @@ public class UserManager {
 
     @EventListener(ApplicationReadyEvent.class)
     public void fillDB() {
-        save(new User(1,"Haawdawdawddi","teacher","root",1,2));
-        save(new User(5,"Not_hadi","student","root",2,3));
+        save(new User(4,"Charlie","teacher","root",1));
+        save(new User(3,"Jake","student","root",2));
     }
 }

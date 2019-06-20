@@ -3,10 +3,9 @@ package app.controllers;
 import app.modules.Mark;
 import app.service.MarkManager;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
-import org.springframework.http.MediaType;
+
 import org.springframework.web.bind.annotation.*;
-import sun.misc.Request;
+
 
 import java.util.Optional;
 
@@ -29,8 +28,8 @@ public class MarkApi {
 
     @CrossOrigin
     @RequestMapping(method = RequestMethod.GET, value = "/get")
-    public Optional<Mark> getById(@RequestParam Long id) {
-        return markManager.findById(id);
+    public Optional<Mark> getById(@RequestParam Long subjectId) {
+        return markManager.findBySubjectId(subjectId);
     }
 
     @CrossOrigin

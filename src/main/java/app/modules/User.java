@@ -1,15 +1,15 @@
 package app.modules;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+   // @GeneratedValue(strategy = GenerationType.AUTO)
     private long userId;
 
     private String name;
@@ -20,7 +20,7 @@ public class User {
     public User() {
     }
 
-    public User(long userId, String name, String role, String password, long subjectId, long markId) {
+    public User(long userId, String name, String role, String password, long subjectId) {
         this.userId=userId;
         this.name = name;
         this.role = role;
