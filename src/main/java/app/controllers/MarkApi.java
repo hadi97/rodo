@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 
-import java.util.Optional;
 
 @RestController
 @RequestMapping("api/marks")
@@ -26,10 +25,11 @@ public class MarkApi {
         return markManager.findAll();
     }
 
+    //marks for one subject
     @CrossOrigin
     @RequestMapping(method = RequestMethod.GET, value = "/get")
-    public Optional<Mark> getById(@RequestParam Long subjectId) {
-        return markManager.findBySubjectId(subjectId);
+    public Iterable<Mark> getById(@RequestParam Long subjectId) {
+        return markManager.findMarksBySubjectId(subjectId);
     }
 
     @CrossOrigin

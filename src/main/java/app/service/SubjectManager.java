@@ -2,6 +2,7 @@ package app.service;
 
 import app.Interfaces.SubjectRepository;
 import app.Interfaces.UserRepository;
+import app.modules.Mark;
 import app.modules.Subject;
 import app.modules.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,8 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Optional;
 
 @Service
@@ -43,7 +46,8 @@ public class SubjectManager {
 
     @EventListener(ApplicationReadyEvent.class)
     public void fillDB() {
-        save(new Subject(1,"Programming", 1));
-        save(new Subject(2,"Designing",2));
+
+        save(new Subject(1,"Programming"));
+        save(new Subject(2,"Designing"));
     }
 }
