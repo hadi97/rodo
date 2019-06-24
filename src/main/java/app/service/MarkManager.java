@@ -45,10 +45,14 @@ public class MarkManager {
 
     @EventListener(ApplicationReadyEvent.class)
     public void fillDB() {
-        save(new Mark(1, 1, 16, 4.5, LocalDate.of(2018, 2, 3)));
-        save(new Mark(2, 1, 15, 4, LocalDate.of(2018, 1, 2)));
-        save(new Mark(3, 2, 17, 4.5, LocalDate.of(2018, 2, 1)));
-        save(new Mark(4, 2, 13, 3.5, LocalDate.of(2018, 2, 15)));
+        save(new Mark(211111, 1, 16, 4.5, LocalDate.of(2018, 2, 3)));
+        save(new Mark(209999, 1, 15, 4, LocalDate.of(2018, 2, 3)));
+        save(new Mark(212322, 2, 17, 4.5, LocalDate.of(2018, 2, 1)));
+        save(new Mark(223121, 2, 13, 3.5, LocalDate.of(2018, 2, 1)));
+        save(new Mark(212151, 2, 17, 4.5, LocalDate.of(2018, 2, 1)));
+        save(new Mark(201231, 2, 15, 4, LocalDate.of(2018, 2, 1)));
+        save(new Mark(192312, 1, 4, 2, LocalDate.of(2018, 2, 3)));
+        save(new Mark(213531, 1, 10, 3, LocalDate.of(2018, 2, 3)));
 
     }
 }

@@ -37,7 +37,17 @@ public class UserManager {
 
     @EventListener(ApplicationReadyEvent.class)
     public void fillDB() {
-        save(new User(4,"Charlie","teacher","root",1));
-        save(new User(3,"Jake","student","root",2));
+        save(new User(1,"Charlie","TEACHER","root",1));
+        save(new User(2,"Marlie","TEACHER","root",2));
+
+        save(new User(211111,"Armin","STUDENT","root",1));
+        save(new User(209999,"Mikasa","STUDENT","root",1));
+        save(new User(212322,"Eren","STUDENT","root",2));
+        save(new User(223121,"Levi","STUDENT","root",2));
+        save(new User(212151,"Zero","STUDENT","root",2));
+        save(new User(201231,"Hero","STUDENT","root",2));
+        save(new User(192312,"Mac","STUDENT","root",1));
+        save(new User(192312,"Jack","STUDENT","root",1));
+
     }
 }
