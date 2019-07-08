@@ -33,8 +33,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.httpBasic().and().authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/api/marks/getAll").hasRole("TEACHER")
-                .antMatchers(HttpMethod.GET,"/api/employees/get").hasRole("TEACHER")
+                //.antMatchers(HttpMethod.GET, "/api/marks/getAll").hasRole("TEACHER")
+               // .antMatchers(HttpMethod.GET,"/api/employees/get").hasRole("TEACHER")
 
                 .antMatchers(HttpMethod.POST, "/api/marks").hasAnyRole("TEACHER")
                 .antMatchers(HttpMethod.POST, "/api/subjects").hasRole("TEACHER")

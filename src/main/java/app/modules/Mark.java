@@ -10,7 +10,7 @@ public class Mark {
 
     @Id
    // @GeneratedValue(strategy = GenerationType.AUTO)
-    private long markId;
+    private long userId;
     private long subjectId;
     private int points;
     private double mark;
@@ -19,16 +19,16 @@ public class Mark {
     public Mark() {
     }
 
-    public Mark(long markId, long subjectId, int points, double mark, LocalDate date) {
-        this.markId = markId;
+    public Mark(long userId, long subjectId, int points, double mark, LocalDate date) {
+        this.userId = userId;
         this.subjectId = subjectId;
         this.points = points;
         this.mark = mark;
         this.date = date;
     }
 
-    public long getMarkId() {
-        return markId;
+    public long getUserId() {
+        return userId;
     }
 
     public long getSubjectId() {
@@ -50,7 +50,7 @@ public class Mark {
     @Override
     public String toString() {
         return "Mark{" +
-                "markId=" + markId +
+                "userId=" + userId +
                 ", subjectId=" + subjectId +
                 ", points=" + points +
                 ", mark=" + mark +
