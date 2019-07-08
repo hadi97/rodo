@@ -16,11 +16,14 @@ public class Subject {
     private String name;
     private int i;
 
+    public Subject(long subjectId, String name){
+
+    }
     public Subject(long subjectId, String name) {
         this.subjectId = subjectId;
         this.name = name;
     }
-
+//hdaawd
     public Subject() {
     }
 
