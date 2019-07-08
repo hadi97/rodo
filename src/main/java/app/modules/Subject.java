@@ -14,6 +14,7 @@ public class Subject {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long subjectId;
     private String name;
+    private int i;
 
     public Subject(long subjectId, String name) {
         this.subjectId = subjectId;
