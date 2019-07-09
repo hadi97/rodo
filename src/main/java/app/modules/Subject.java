@@ -15,7 +15,7 @@ public class Subject {
     private long subjectId;
     private String name;
     private int i;
-
+    private int lol;
     public Subject(long subjectId, String name){
 
     }
