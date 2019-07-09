@@ -15,7 +15,7 @@ public class tests {
     @Test
     public void shouldProperlyCountPlus() {
         double value  = 4;
-        double expected = 2+2;
+        double expected = 1+2;
 
         assertThat(value, is(expected));
     }
