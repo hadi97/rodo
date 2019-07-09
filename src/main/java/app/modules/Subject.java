@@ -15,6 +15,7 @@ public class Subject {
     private long subjectId;
     private String name;
     private int i;
+    private int j;
 
     public Subject(long subjectId, String name) {
         this.subjectId = subjectId;
