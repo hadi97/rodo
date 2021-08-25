@@ -1,59 +1,61 @@
 package app.modules;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import java.time.LocalDate;
+import java.util.Date;
 @Entity
+@Table(name = "marks")
 public class Mark {
 
+
     @Id
-   @GeneratedValue(strategy = GenerationType.AUTO)
-    private long userId;
-    private long subjectId;
-    private int points;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer markId;
+    private Integer studentId;
     private double mark;
-    private LocalDate date;
+    private Date date;
+    private boolean isRead;
 
     public Mark() {
     }
 
-    public Mark(long userId, long subjectId, int points, double mark, LocalDate date) {
-        this.userId = userId;
-        this.subjectId = subjectId;
-        this.points = points;
+    public Mark(Integer studentId,  double mark, Date date,boolean isRead) {
+
+        this.studentId = studentId;
         this.mark = mark;
         this.date = date;
+        this.isRead = isRead;
     }
 
-    public long getUserId() {
-        return userId;
+    public long getMarkId() {
+        return markId;
     }
 
-    public long getSubjectId() {
-        return subjectId;
+    public Integer getUserId() {
+        return studentId;
     }
 
-    public int getPoints() {
-        return points;
-    }
 
     public double getMark() {
         return mark;
     }
 
-    public LocalDate getDate() {
+    public Date getDate() {
         return date;
+    }
+
+    public Integer getStudentId() {
+        return studentId;
+    }
+
+    public boolean isRead() {
+        return isRead;
     }
 
     @Override
     public String toString() {
         return "Mark{" +
-                "userId=" + userId +
-                ", subjectId=" + subjectId +
-                ", points=" + points +
+                "userId=" + studentId +
                 ", mark=" + mark +
                 ", date=" + date +
                 '}';
